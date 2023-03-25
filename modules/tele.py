@@ -2,6 +2,16 @@
 
 # import the requests module
 import requests
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+from telethon import TelegramClient, events, sync
+import sys
+
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
+telegram_app_id = os.getenv("TELEGRAM_APP_ID")
+telegram_app_hash = os.getenv("TELEGRAM_APP_HASH")
 
 #class to send a request to the telegram bot api based on user supplied endpoint
 class TelegramBot:
@@ -93,3 +103,22 @@ class TelegramBot:
                 file_paths.append(response.json()['result']['file_path'])
             # return the file paths
             return file_paths
+
+# class to resolve a telegram username and get data
+
+class TelegramUser:
+    # function to initialize the class
+    def __init__(self, username):
+        # set the username
+        self.username = username
+
+    # function to resolve a telegram username
+    def resolv_user(self):
+        # setup telegram session
+        client = TelegramClient('natsar', telegram_app_id, telegram_app_hash)
+        client.start()
+        # Use telegram client to get user info with get_entity
+        resolvedData = client.get_entity(self.username)
+        # Disconnect the client and return the user info
+        client.disconnect()
+        return resolvedData

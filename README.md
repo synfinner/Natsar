@@ -12,6 +12,12 @@ Installation:
 pip3 install -r requirements.txt
 ```
 
+Get your Telegram client API keys from: 
+
+* https://my.telegram.org
+
+Put them into a .env file, feel free to rename `.env_sample` to `.env`
+
 This is an ongoing project, please feel free to keep checking back as I add functions and more!
 
 ## What this script does
@@ -20,6 +26,7 @@ This is an ongoing project, please feel free to keep checking back as I add func
 * Extracts the users that are sending bot updates
 * Pulls user profile name and description
 * Attempts to pull downloadable file links contained within bot updates
+* User Telethon to grab profile (phone, language code, online status)
 
 ## Output
 
