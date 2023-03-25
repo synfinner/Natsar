@@ -45,12 +45,18 @@ Username: xxxx[REDACTED]xxxxx
 Profile Link: https://t.me/xxxx[REDACTED]xxxxx
 Profile Title: xxxx[REDACTED]xxxxx
 Profile Description: xxxx[REDACTED]xxxxx.
+User Phone: None
+User Language Code: None
+User Status: Online
 -------------------------------------------
 User ID: 61xxxx[REDACTED]xxxxx5
 Username: xxxx[REDACTED]xxxxx
 Profile Link: https://t.me/xxxx[REDACTED]xxxxx
 Profile Title: xxxx[REDACTED]xxxxx
 Profile Description: xxxx[REDACTED]xxxxx.
+User Phone: +1xxxxxxxxxx
+User Language Code: None
+User Status: Online
 -------------------------------------------
 ############################################
 
