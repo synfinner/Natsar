@@ -26,7 +26,7 @@ This is an ongoing project, please feel free to keep checking back as I add func
 * Extracts the users that are sending bot updates
 * Pulls user profile name and description
 * Attempts to pull downloadable file links contained within bot updates
-* User Telethon to grab profile (phone, language code, online status)
+* Use Telethon to grab profile (phone, language code, online status)
 
 ## Output
 
