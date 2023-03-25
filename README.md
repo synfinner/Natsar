@@ -25,32 +25,32 @@ This is an ongoing project, please feel free to keep checking back as I add func
 
 ```
 ./natsar.py 32xxxxxxx2:BANHunxxxxxxxxxxxxxxx0Bt2
-This script will get data from the telegram bot updates.
-It will then get the profile URLs of the users.
-Do you want to continue? (y/n): y
-Validating the telegram bot token...
-Telegram bot token is valid.
-
-############################################
-Bot Name: xxxxx
-Bot Username: https://t.me/xxxxxxx
-Bot ID: 15xxxxxxx
+##############+Bot info+####################
+Bot ID: xxxx[REDACTED]xxxxx
+Bot Username: notxxxx[REDACTED]xxxxxbot
+Bot Name: xxxx[REDACTED]xxxxx
 ############################################
 
-Getting user profile URLs...
+##############+Bot Users+###################
+-------------------------------------------
+User ID: 49xxxx[REDACTED]xxxxx
+Username: xxxx[REDACTED]xxxxx
+Profile Link: https://t.me/xxxx[REDACTED]xxxxx
+Profile Title: xxxx[REDACTED]xxxxx
+Profile Description: xxxx[REDACTED]xxxxx.
+-------------------------------------------
+User ID: 61xxxx[REDACTED]xxxxx5
+Username: xxxx[REDACTED]xxxxx
+Profile Link: https://t.me/xxxx[REDACTED]xxxxx
+Profile Title: xxxx[REDACTED]xxxxx
+Profile Description: xxxx[REDACTED]xxxxx.
+-------------------------------------------
+############################################
 
-
-37 user profiles found:
-https://t.me/Dxxx
-https://t.me/Oxxx
-https://t.me/vxxx
-https://t.me/xxxx
-...
-
-Extracting Telegram profile data:
-https://t.me/Dxxx	REDACTED	Redacted profile description
-https://t.me/Oxxx	REDACTED	Redacted profile description
-https://t.me/vxxx	REDACTED	Redacted profile description
-https://t.me/xxxx	REDACTED	Redacted profile description
-...
+##############+Bot Files+###################
+File Link: https://api.telegram.org/file/botxxxx[REDACTED]xxxxx:xxxx[REDACTED]xxxxx/documents/xxxx[REDACTED]xxxxx_redacted
+-------------------------------------------
+File Link: https://api.telegram.org/file/botxxxx[REDACTED]xxxxx:xxxx[REDACTED]xxxxx/documents/xxxx[REDACTED]xxxxx.txt
+-------------------------------------------
+############################################
 ```
