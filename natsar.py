@@ -3,6 +3,25 @@
 import sys
 import requests
 
+
+# function to extract the profile data
+def extract_profile_data(userProfiles):
+    # loop through the user profiles
+    for userProfile in userProfiles:
+        # get the profile data
+        profile = requests.get(userProfile).text
+        # try to extract the profile data
+        try:
+            # get the profile data
+            profile_desc = profile.split('og:description" content="')[1].split('"')[0]
+            # get the profile title from og:title
+            profile_title = profile.split('og:title" content="')[1].split('"')[0]
+            # print tab delimited profile data
+            print('{}\t{}\t{}'.format(userProfile, profile_title, profile_desc))
+        except:
+            # if it fails, print that it failed
+            print('Failed to extract profile data from {}'.format(userProfile))
+
 # function to format the profile
 def profile_format(users):
     # create a list to store the profile
@@ -43,6 +62,10 @@ def parse_updates(updates):
     # for each user profile in the userProfiles list, print it in a nice format
     for userProfile in userProfiles:
         print(userProfile) 
+    # print a new line and that we are now going to extract telegram profile data
+    print('\nExtracting Telegram profile data:')
+    # send the userProfiles list to the extract_profile_data() function
+    extract_profile_data(userProfiles)
         
 # function to validate the telegram bot token
 def validate_tg_bot(tg_bot):
