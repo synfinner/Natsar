@@ -1,5 +1,7 @@
 # README.md
 
+**Update:** 25 March, 2023 -- Doing a small rewrite of this and how it functions. 
+
 This python script is designed to pull Telegram bot update information, such as each user that is issuing updates. 
 
 Part of the fun of this script is that I wanted to see if it could be done entirely--or limited in intervention--with GitHub CoPilot. 
