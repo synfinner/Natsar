@@ -78,6 +78,12 @@ class TelegramBot:
                     files.append(i['message']['reply_to_message']['document']['file_id'])
                 except KeyError:
                     pass
+            # for each update, get the file id if it exists
+            for i in response.json()['result']:
+                try:
+                    files.append(i['message']['document']['file_id'])
+                except KeyError:
+                    pass
             # call the remove_file_duplicates function to remove duplicate ids
             files = self.remove_file_duplicates(files)
             # for each file id, send a request to the telegram bot api to get the file path and store it in a list
