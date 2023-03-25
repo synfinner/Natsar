@@ -14,6 +14,13 @@ pip3 install -r requirements.txt
 
 This is an ongoing project, please feel free to keep checking back as I add functions and more!
 
+## What this script does
+
+* Pulls the Telegram Bot ID, Username, and Name
+* Extracts the users that are sending bot updates
+* Pulls user profile name and description
+* Attempts to pull downloadable file links contained within bot updates
+
 ## Output
 
 ```
