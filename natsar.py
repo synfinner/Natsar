@@ -66,7 +66,19 @@ def parse_updates(updates):
     print('\nExtracting Telegram profile data:')
     # send the userProfiles list to the extract_profile_data() function
     extract_profile_data(userProfiles)
-        
+
+#function to call the getMe() method of the telegram bot API
+def get_me(tg_bot):
+    # get the telegram bot data with tg_bot as the bot token
+    url = 'https://api.telegram.org/bot{}/getMe'.format(tg_bot)
+    response = requests.get(url).json()
+    # print the bot data
+    print("\n############################################")
+    print("Bot Name: {}".format(response['result']['first_name']))
+    print("Bot Username: https://t.me/{}".format(response['result']['username']))
+    print("Bot ID: {}".format(response['result']['id']))
+    print("############################################\n")
+
 # function to validate the telegram bot token
 def validate_tg_bot(tg_bot):
     # get the telegram bot updates with tg_bot as the bot token
@@ -79,6 +91,8 @@ def validate_tg_bot(tg_bot):
         sys.exit(1)
     # if it's ok, print that the Telegram bot token is valid
     print('Telegram bot token is valid.')
+    # call the get_me() function to get the bot data
+    get_me(tg_bot)
     # send the response to parse_updates()
     parse_updates(response['result'])
 

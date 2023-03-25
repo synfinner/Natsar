@@ -21,17 +21,27 @@ It will then get the profile URLs of the users.
 Do you want to continue? (y/n): y
 Validating the telegram bot token...
 Telegram bot token is valid.
+
+############################################
+Bot Name: xxxxx
+Bot Username: https://t.me/xxxxxxx
+Bot ID: 15xxxxxxx
+############################################
+
 Getting user profile URLs...
 
 
-29 user profiles found:
+37 user profiles found:
+https://t.me/Dxxx
+https://t.me/Oxxx
+https://t.me/vxxx
 https://t.me/xxxx
-https://t.me/xxxx
-https://t.me/xxxx
-https://t.me/xxxx
-https://t.me/xxxx
-https://t.me/xxxx
-https://t.me/xxxx
-https://t.me/xxxx
+...
+
+Extracting Telegram profile data:
+https://t.me/Dxxx	REDACTED	Redacted profile description
+https://t.me/Oxxx	REDACTED	Redacted profile description
+https://t.me/vxxx	REDACTED	Redacted profile description
+https://t.me/xxxx	REDACTED	Redacted profile description
 ...
 ```
