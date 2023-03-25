@@ -3,6 +3,19 @@
 import sys
 from modules import tele as tg
 
+# function to get file links from bot
+def get_file_links(token):
+    # create a telegram bot object
+    bot = tg.TelegramBot(token)
+    # send a request to the telegram bot api
+    response = bot.get_tg_files()
+    print("\n##############+Bot Files+###################")
+    for paths in response:
+        # print the file link
+        print("File Link: https://api.telegram.org/file/bot{}/{}".format(token, paths))
+        print("-------------------------------------------")
+    print("############################################\n")
+
 # function to get bot updates
 def get_usernames(token):
     bot = tg.TelegramBot(token)
@@ -17,7 +30,6 @@ def get_usernames(token):
         print("Profile Link: https://t.me/{}".format(i[1]))
         print("Profile Title: {}".format(profile[1]))
         print("Profile Description: {}".format(profile[0]))
-        print("-------------------------------------------")
     print("############################################\n")
 
 def get_bot_info(token):
@@ -40,7 +52,8 @@ def main(token):
     get_bot_info(token)
     # call a function to get bot users
     get_usernames(token)
-
+    # call a function to get file links from bot
+    get_file_links(token)
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
@@ -49,3 +62,4 @@ if __name__ == '__main__':
 
     # call main()
     main(sys.argv[1])
+    
