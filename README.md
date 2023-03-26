@@ -6,17 +6,23 @@ This python script is designed to pull Telegram bot update information, such as 
 
 Part of the fun of this script is that I wanted to see if it could be done entirely--or limited in intervention--with GitHub CoPilot. 
 
-Installation: 
+## Installation and Setup
+
+**Install Dependencies:**
 
 ```
 pip3 install -r requirements.txt
 ```
 
-Get your Telegram client API keys from: 
+**Get Telegram client API keys:**
+
+Login copy the app_id and app_hash values from:  
 
 * https://my.telegram.org
 
-Put them into a .env file, feel free to rename `.env_sample` to `.env`
+**Add Telegram API data to env**
+
+Put the app_id and app_hash into a .env file, feel free to rename `.env_sample` to `.env`. First run will ask for you to login to Telegram. This is to create the necessary session file for Telethon. If you copy your cloned repo somewhere, ensure you do not accidentially include your `.session` file to an untrusted third party. 
 
 This is an ongoing project, please feel free to keep checking back as I add functions and more!
 
