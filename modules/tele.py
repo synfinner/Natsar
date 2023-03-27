@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 from telethon import TelegramClient, events, sync
-import sys
+
 
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
@@ -105,7 +105,6 @@ class TelegramBot:
             return file_paths
 
 # class to resolve a telegram username and get data
-
 class TelegramUser:
     # function to initialize the class
     def __init__(self, username):
