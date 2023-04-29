@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 from telethon import TelegramClient, events, sync
-
+import datetime
 
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
@@ -77,6 +77,10 @@ class TelegramBot:
                     pass
             # call a function to remove duplicates
             users = self.remove_duplicates(users)
+            now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            with open('users.log', 'a') as f:
+                for username, user_id in users:
+                    f.write(f'{now}, {self.token}, {username}, {user_id}\n')
             return users
     def get_tg_files(self):
             # get the telegram bot updates
